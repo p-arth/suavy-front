@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap')
 
 /* Header Structure */
 
@@ -14,6 +15,8 @@
 }
 
 .home__row--map {
+    background-color: #2F245F;
+    background-image: linear-gradient(0deg, #433a6e 0%, #2F245F 100%);
     text-align: center;
 }
 
@@ -71,7 +74,8 @@
 }
 
 .map-title span {
-    color: #ffa32b;
+    color: #F64467;
+    font-weight: bolder;
 }
 
 .map-container {
@@ -286,9 +290,273 @@
     background-size: 140%;
     background-position: center;
     width: 100%;
-    height: 240px;
+    height: 280px;
+    /* display: flex; */
+    /* align-items: center; */
 }
 
 .services-icons {
-    display: inline-block;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* align-self: center; */
+}
+
+.service-box {
+    display: block;
+    margin-top: 50px;
+}
+
+.service-box p {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 13px;
+    letter-spacing: 6px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #30233D;
+}
+
+.service-icon {
+    font-size: 102px;
+    color: #F64467;
+}
+
+.what-we-do {
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 21px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #F64467;
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+.what-we-do:hover {
+    color: #30233D;
+    cursor: pointer;
+}
+
+.arrows-1 {
+    font-size: 24px;
+    color: #F64467;
+    /* -moz-animation: bounce1 2s infinite;
+    -webkit-animation: bounce1 2s infinite;
+    animation: bounce1 2s infinite;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important; */
+    outline: none !important;
+    box-shadow: none !important;
+    transition: all .3s ease-in-out;
+}
+
+.arrows-1.active {
+    transition: all .3s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.arrows-2 {
+    font-size: 24px;
+    color: #F64467;
+    /* -moz-animation: bounce2 2s infinite;
+    -webkit-animation: bounce2 2s infinite;
+    animation: bounce2 2s infinite;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important; */
+    outline: none !important;
+    box-shadow: none !important;
+    transition: all .3s ease-in-out;
+}
+
+.arrows-2.active {
+    transition: all .3s ease-in-out;
+    transform: rotate(90deg);
+}
+
+.arrows-1:hover {
+    color: #30233D;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    outline: none !important;
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+.arrows-2:hover {
+    color: #30233D;
+    -webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    outline: none !important;
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+@keyframes bounce1 {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-10px);
+    }
+    60% {
+      transform: translateX(-5px);
+    }
+}
+
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(10px);
+    }
+    60% {
+      transform: translateX(5px);
+    }
+}
+
+/* Our Services Box */
+
+.services-more {
+    background-color: #110C2A;
+    padding: 25px;
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    /* display: none; */
+}
+
+.services-more.invisible {
+    /* max-height: 1200px; */
+    display: none;
+}
+
+.services-more h2 {
+    color: white;
+    font-family: 'M PLUS 1p', sans-serif;
+    /* font-weight: bold; */
+    font-size: 45px;
+    text-align: center;
+}
+
+.services-more h3 {
+    color: white;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin: 18px 32%;
+}
+
+.services-category {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    text-align: center;
+}
+
+.services-categories {
+    flex: 0 0 33.33333%;
+    display: block;
+    text-align: center;
+    /* margin: 15px; */
+}
+
+.services-categories h3 {
+    text-align: center;
+    color: #29F0B5;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.services-categories p {
+    font-family: 'M PLUS 1p', sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    margin: 16px 70px 70px;
+    line-height: 180%;
+}
+
+.services-avatar {
+    margin: auto;
+    /* text-align: center; */
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: solid 1px #2C1F42;
+    background-color: #150D2D;
+    font-size: 32px;
+    color: #29F0B5;
+    line-height: 64px;
+}
+
+.services-avatar i {
+    margin: auto;
+}
+
+.send-message {
+    font-family: 'M PLUS 1p', sans-serif;
+    background-color: #F64467;
+    color: white;
+    border-radius: 30px;
+    padding: 20px 50px;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.button-div {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+/* Members Div */
+
+.members-div {
+    background-image: url(./images/pattern-purple.jpg);
+    background-size: 140%;
+    background-position: center;
+    padding: 25px;
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    text-align: center;
+}
+
+.member {
+    flex: 0 0 25%;
+    display: block;
+    text-align: center;
+}
+
+.member h3 {
+    font-size: 21px;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.member p {
+    font-size: 13px;
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #89809B;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 0;
+}
+
+.member-avatar img {
+    width: 262px;
+    height: 262px;
+    border-radius: 50%;
+    margin-top: 80px;
 }
